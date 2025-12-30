@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papan Skor - Klasemen</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- RESET & BASIC STYLE --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            /* Warna Biru sesuai desain */
+            background-color: #00509E; 
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            padding: 20px;
+        }
+
+        /* --- HEADER LOGOS --- */
+        .league-logos {
+            display: flex;
+            justify-content: space-between; /* Jejerkan logo secara merata */
+            align-items: center;
+            margin-bottom: 30px;
+            opacity: 0.8; /* Sedikit transparan agar elegan */
+        }
+        
+        .league-icon {
+            /* Ini kotak pura-pura sebagai logo liga */
+            width: 40px; 
+            height: 40px; 
+            background-color: rgba(255,255,255,0.2); 
+            border-radius: 5px;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            font-size: 8px;
+            text-align: center;
+        }
+
+        /* --- SEASON DROPDOWN --- */
+        .season-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .season-text {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .season-year {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        /* --- TABLE KLASEMEN --- */
+        .standings-table {
+            width: 100%;
+            border-collapse: collapse; /* Hilangkan jarak antar sel */
+            font-size: 0.75rem; /* Ukuran font tabel diperkecil agar muat */
+        }
+
+        /* Header Tabel (Club, MP, W, D, etc) */
+        .standings-table th {
+            text-align: center;
+            padding-bottom: 10px;
+            opacity: 0.6;
+            font-weight: 400;
+        }
+        
+        .standings-table th.th-club {
+            text-align: left; /* Kolom 'Club' rata kiri */
+            padding-left: 10px;
+        }
+
+        /* Isi Tabel */
+        .standings-table td {
+            padding: 12px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1); /* Garis tipis antar baris */
+        }
+
+        /* Styling Khusus Kolom Klub */
+        .club-cell {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Jarak antara logo dan nama */
+            text-align: left;
+        }
+
+        /* Styling Nomor Peringkat (1, 2, 3) */
+        .rank {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            width: 20px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        /* Kotak pura-pura untuk logo tim */
+        .team-logo-placeholder {
+            width: 25px; 
+            height: 25px; 
+            background-color: white; 
+            border-radius: 50%; /* Lingkaran */
+        }
+
+        .club-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="league-logos">
+        <div class="league-icon">Liga 1</div>
+        <div class="league-icon">LaLiga</div>
+        <div class="league-icon">DFL</div>
+        <div class="league-icon">MFL</div>
+        <div class="league-icon">EPL</div>
+    </div>
+
+    <div class="season-info">
+        <div class="season-text">Season</div>
+        <div class="season-year">2025-2026 ▼</div>
+    </div>
+
+    <table class="standings-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th class="th-club">Club</th>
+                <th>MP</th>
+                <th>W</th>
+                <th>D</th>
+                <th>L</th>
+                <th>GF</th>
+                <th>GA</th>
+                <th>GD</th>
+                <th>Pts</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="rank">1</span></td>
+                <td>
+                    <div class="club-cell">
+                        <div class="team-logo-placeholder" style="background-color: #00b4d8;"></div> 
+                        <span class="club-name">Persib</span>
+                    </div>
+                </td>
+                <td>15</td>
+                <td>11</td>
+                <td>1</td>
+                <td>3</td>
+                <td>25</td>
+                <td>10</td>
+                <td>15</td>
+                <td>34</td>
+            </tr>
+
+            <tr>
+                <td><span class="rank">2</span></td>
+                <td>
+                    <div class="club-cell">
+                        <div class="team-logo-placeholder" style="background-color: #fca311;"></div>
+                        <span class="club-name">Borneo FC</span>
+                    </div>
+                </td>
+                <td>15</td>
+                <td>11</td>
+                <td>1</td>
+                <td>3</td>
+                <td>29</td>
+                <td>13</td>
+                <td>16</td>
+                <td>34</td>
+            </tr>
+
+            <tr>
+                <td><span class="rank">3</span></td>
+                <td>
+                    <div class="club-cell">
+                        <div class="team-logo-placeholder" style="background-color: #d90429;"></div>
+                        <span class="club-name">Persija Jakarta</span>
+                    </div>
+                </td>
+                <td>15</td>
+                <td>10</td>
+                <td>2</td>
+                <td>3</td>
+                <td>30</td>
+                <td>13</td>
+                <td>17</td>
+                <td>32</td>
+            </tr>
+
+             <tr>
+                <td><span class="rank">4</span></td>
+                <td>
+                    <div class="club-cell">
+                        <div class="team-logo-placeholder" style="background-color: #8d99ae;"></div>
+                        <span class="club-name">Malut United</span>
+                    </div>
+                </td>
+                <td>15</td>
+                <td>9</td>
+                <td>4</td>
+                <td>2</td>
+                <td>26</td>
+                <td>15</td>
+                <td>11</td>
+                <td>31</td>
+            </tr>
+            
+            <tr>
+                <td><span class="rank">5</span></td>
+                <td>
+                    <div class="club-cell">
+                        <div class="team-logo-placeholder" style="background-color: #2b2d42;"></div>
+                        <span class="club-name">PSIM Yogyakarta</span>
+                    </div>
+                </td>
+                <td>15</td>
+                <td>6</td>
+                <td>6</td>
+                <td>3</td>
+                <td>19</td>
+                <td>18</td>
+                <td>1</td>
+                <td>24</td>
+            </tr>
+
+             <tr>
+                <td><span class="rank">6</span></td>
+                <td>
+                    <div class="club-cell">
+                        <div class="team-logo-placeholder" style="background-color: #55a630;"></div>
+                        <span class="club-name">Persebaya</span>
+                    </div>
+                </td>
+                <td>15</td>
+                <td>5</td>
+                <td>7</td>
+                <td>3</td>
+                <td>21</td>
+                <td>15</td>
+                <td>6</td>
+                <td>22</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+</html>
