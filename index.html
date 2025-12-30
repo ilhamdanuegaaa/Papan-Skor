@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papan Skor</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS langsung ditaruh di sini agar praktis */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Warna Background Lime Green */
+            background-color: #DFFF00; 
+            
+            /* Teknik Centering: Membuat isi body tepat di tengah layar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Tinggi 100% layar device */
+            overflow: hidden; /* Mencegah scroll */
+        }
+
+        .logo-container {
+            /* Container untuk teks logo */
+            text-align: left; /* Teks rata kiri seperti di desain (huruf P sejajar s) */
+        }
+
+        h1.logo {
+            font-family: 'Bebas Neue', sans-serif; /* Font custom */
+            color: #004D40; /* Warna Hijau Tua Gelap */
+            font-size: 6rem; /* Ukuran besar */
+            line-height: 0.85; /* Jarak antar baris dirapatkan agar menumpuk padat */
+            letter-spacing: 2px; /* Sedikit jarak antar huruf */
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container">
+        <h1 class="logo">
+            Papan<br>skor.
+        </h1>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            // Ganti 'home.html' dengan nama file halaman keduamu (Start page)
+            window.location.href = 'home.html'; 
+        }, 3000); 
+    </script>
+
+</body>
+</html>
